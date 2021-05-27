@@ -8,11 +8,16 @@ This is my task - Service Evaluation Survey application built with Laravel frame
 - Add new survey data
 
 ## Instructions for use:
--   If you do not have composer installed on your system, install it (installation instructions [here](https:getcomposer.org/download)).
 -   Clone this repository or download it as a ZIP package.
 -   Open it with Visual Studio Code or your preferred code editor.
--   Create a fresh schema in your MySQL server.
--   Rename **'.env.example'** file to **'.env'** inside of the project's root directory and configure the database information.
+-   Create a fresh schema 'servicerating' in your MySQL server.
+-   Rename **'.env.example'** file to **'.env'** inside of the project's root directory and configure the database information:
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=servicerating
+    DB_USERNAME=root
+    DB_PASSWORD=mysql
 -   Using GitBash, CMD or other terminal in your code editor:
 -   if composer is installed locally: run **php <'path to composer.phar file location'>/composer.phar install**
 -   if composer is installed on your system globally: run **composer install**
