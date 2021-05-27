@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Employee extends Model
 {
     use HasFactory;
+    public $fillable = ['name', 'surname'];
+
+    public function sales(){
+        return $this->hasMany('App\Models\Sale');
 }
