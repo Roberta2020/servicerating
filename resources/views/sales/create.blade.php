@@ -2,27 +2,6 @@
 @section('content')
 <link rel="stylesheet" href="{{ asset('../css/create.css') }}">
 <script type="text/javascript" src="{{ URL::to('../js/create.js') }}"></script>
-    {{-- Validation error --}}
-    {{-- @if ($errors->any())
-        <div>
-            @foreach ($errors->all() as $error)
-                <p style="color: red">{{ $error }}</p>
-            @endforeach
-        </div>
-    @endif --}}
-    {{-- Database error --}}
-    {{-- @if (session('status_success'))
-        <p style="color: green"><b>{{ session('status_success') }}</b></p>
-    @else
-        <p style="color: red"><b>{{ session('status_error') }}</b></p>
-    @endif
-    @if (auth()->check())
-        @if (session('status_success'))
-            <div class="alert alert-success" role="alert">{{ session('status_success') }}</div>
-        @endif
-        @if (session('status_error'))
-            <div class="alert alert-danger" role="alert">{{ session('status_error') }}</div>
-        @endif --}}
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8">
@@ -105,8 +84,7 @@
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                     <label for="">Gal galite pakomentuoti, kodėl pateikėte tokius vertinimus?</label>
-                                    <textarea id="mce" type="text" name="comments" rows=5 cols=20 maxlength="100"
-                                        class="form-control"></textarea>
+                                    <textarea id="mce" type="text" name="comments" rows="5" cols="20" class="form-control"></textarea>
                                 </div>
                                 <div class="form-group">
                                     @error('is_consented')
@@ -131,5 +109,4 @@
                 </div>
             </div>
         </div>
-    {{-- @endif --}}
 @endsection
