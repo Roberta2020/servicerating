@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <link rel="stylesheet" href="{{ asset('../css/create.css') }}">
+<script type="text/javascript" src="{{ URL::to('../js/create.js') }}"></script>
     {{-- Validation error --}}
     {{-- @if ($errors->any())
         <div>
@@ -114,10 +115,10 @@
                                     <label>Ar galėsime šį Jūsų vertinimą panaudoti savo svetainėje ar socialiniuose puslapiuose? </label>
                                         <br>
                                         <div class="check">
-                                        <input type="checkbox" name="is_consented" id="is_consented" value="1"><div>Taip</div>
+                                        <input type="checkbox" class="radioCheck" name="is_consented" id="is_consented" value="1" onclick="check(this);"><div>Taip</div>
                                         </div>
                                         <div class="check">
-                                        <input type="checkbox" name="is_consented" id="is_consented" value="0"><div>Ne</div>
+                                        <input type="checkbox" class="radioCheck" name="is_consented" id="is_consented" value="0" onclick="check(this);"><div>Ne</div>
                                         </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Siųsti</button>
