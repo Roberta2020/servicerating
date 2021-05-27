@@ -13,7 +13,7 @@ This is my task - Service Evaluation Survey application built with Laravel frame
     -   Open it with Visual Studio Code or your preferred code editor.
     -   Create a fresh schema in your MySQL server.
     -   Rename **'.env.example'** file to **'.env'** inside of the project's root directory and configure the database information.
--   Using GitBash, CMD or other terminal in your code editor:
+    -   Using GitBash, CMD or other terminal in your code editor:
     -   if composer is installed locally: run **php <'path to composer.phar file location'>/composer.phar install**
     -   if composer is installed on your system globally: run **composer install**
     -   Run **php artisan key:generate**
