@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource('employee', App\Http\Controllers\EmployeeController::class);
+Route::resource('sales', App\Http\Controllers\SaleController::class);
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

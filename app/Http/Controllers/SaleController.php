@@ -14,7 +14,7 @@ class SaleController extends Controller
      */
     public function index()
     {
-        //
+        return view('sales.index', ['sales' => Sale::orderBy('employee_id')->get()]);
     }
 
     /**
@@ -24,7 +24,8 @@ class SaleController extends Controller
      */
     public function create()
     {
-        //
+        $employees = \App\Models\Employee::orderBy('name')->get();
+        return view('sales.create', ['employees' => $employees]);
     }
 
     /**
@@ -35,7 +36,19 @@ class SaleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'employee_id' => 'required',
+            'recommendation' => 'required',
+            'speed' => 'required',
+            'service' => 'required',
+            'comments' => 'required',
+            'is_consented' => 'required',
+        ]);
+        $sale = new Sale();
+        $sale->fill($request->all());
+        return ($sale->save() !== 1)
+            ? redirect('/sales')->with('status_success', 'Naujas atsiliepimas pridėtas!')
+            : redirect('/sales')->with('status_error', 'Naujas atsiliepimas negali būti pridėtas!');
     }
 
     /**
