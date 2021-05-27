@@ -21,7 +21,7 @@ class CreateSalesTable extends Migration
             $table->integer('speed');
             $table->integer('service');
             $table->text('comments');
-            $table->boolean('is_consented')->default(0)->change();
+            $table->boolean('is_consented')->default(false);
             $table->timestamps();
             $table->foreign('employee_id')
             ->references('id')

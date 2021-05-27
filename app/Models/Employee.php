@@ -13,3 +13,4 @@ class Employee extends Model
     public function sales(){
         return $this->hasMany('App\Models\Sale');
 }
+}
